@@ -1,0 +1,18 @@
+@import '../application' 
+
+.portfolio-item
+    flex: 0 0 33%
+    padding: $m-base $m-base
+    +media-breakpoint-up(sm)
+        flex: 0 0 100%
+
+    &__content
+        margin: $m-base 0
+        +media-breakpoint-up(sm)
+            display: none
+
+    &__subtitle
+        color: $bright-grey
+
+    &__title
+        font-weight: bold
