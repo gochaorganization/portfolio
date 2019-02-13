@@ -1,20 +1,19 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 
 import React from "react";
+import './PortfolioItem.sass'
 
-const PortfolioItem = ({ portfolio }) => {
-  console.log(portfolio);
-
+const PortfolioItem = ({ portfolio: {src, title, subtitle} }) => {
   return (
     <div className="portfolio-item">
       <img
         className="portfolio-item__image"
-        src={portfolio.src}
+        src={src}
         alt="Portfolio image"
       />
       <div className="portfolio-item__content">
-        <div className="portfolio-item__title">{portfolio.title}</div>
-        <div className="portfolio-item__subtitle">{portfolio.subtitle}</div>
+        <div className="portfolio-item__title">{title}</div>
+        <div className="portfolio-item__subtitle">{subtitle}</div>
       </div>
     </div>
   );

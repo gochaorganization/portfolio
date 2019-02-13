@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import "./Content.sass";
 import _ from "lodash";
+
 import PortfolioItem from "./PortfolioItem";
+
+import "./Content.sass";
 
 class Content extends Component {
   state = {
