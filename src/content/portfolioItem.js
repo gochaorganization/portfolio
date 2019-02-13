@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 
 import React from "react";
-import './PortfolioItem.sass'
+import './portfolioItem.sass'
 
 const PortfolioItem = ({ portfolio: {src, title, subtitle} }) => {
   return (

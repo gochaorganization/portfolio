@@ -4,7 +4,7 @@ import Header from "./header";
 import Content from "./content";
 import Footer from "./footer";
 
-import "./App.sass";
+import "./app.sass";
 
 class App extends Component {
   render() {

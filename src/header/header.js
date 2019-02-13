@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Header.sass";
+import "./header.sass";
 
 const Header = () => (
   <header className="header">
