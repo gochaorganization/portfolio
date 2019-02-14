@@ -1,10 +1,10 @@
 @import '../application' 
 
 .portfolio-item
-    flex: 0 0 33%
+    flex: 0 0 100%
     padding: $m-base $m-base
     +media-breakpoint-up(sm)
-        flex: 0 0 100%
+        flex: 0 0 33.33%
 
     &__content
         margin: $m-base 0
@@ -16,3 +16,6 @@
 
     &__title
         font-weight: bold
+
+    &__image 
+        max-width: 100%
