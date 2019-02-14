@@ -1,33 +1,14 @@
 @import '../application' 
     
 .content
-    margin-top: 30px
+    margin-top: $m-lg
 
-.content__description
-    font-size: 12px
-    max-width: 50%
-    font-smooth: antialiased
+    &__description
+        font-size: $font-xs
+        font-smooth: antialiased
+        max-width: 50%
 
-.content__portfolio
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-
-
-.portfolio-item
-    padding: 0 20px
-    flex: 0 0 100%
-    +media-breakpoint-up(sm)
-        flex: 0 0 28%
-        padding: 20px 20px
-       
-    &__subtitle
-        color: #b1b1b1
-
-    &__title
-        font-weight: bold
-
-    &__content
-        margin: 20px 0
-        +media-breakpoint-up(sm)
-            display: none
+    &__portfolio
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
