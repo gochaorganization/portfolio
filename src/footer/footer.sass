@@ -1,8 +1,5 @@
 @import '../application'
 
-.icon--facebook
-    +icon(test, 'ea91')
-
 .footer
     display: flex    
     flex-direction: column
@@ -14,20 +11,21 @@
     &__list
         display: flex
         flex-direction: column
+        list-style: none
         margin: 0
         padding: $m-base 0
-        list-style: none
         +media-breakpoint-up(sm)
             flex-direction: row
 
         &-link 
-            display: block
-            margin: $m-xs 0
+            align-items: center
             color: $grey
+            display: flex
             font-size: $font-xs
+            margin: $m-xs 0
             +media-breakpoint-up(sm)
             margin: 0 $m-xs       
-
+        
     &__credentials
         color: $grey
         font-size: $font-xs
@@ -36,4 +34,8 @@
 
         &--red
             color: $red
-        
+
+.icon-align-left:before
+    display: inline-block
+    margin-right: $m-sm
+    width: $icon-size

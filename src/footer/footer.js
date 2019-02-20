@@ -5,17 +5,26 @@ const Footer = () => (
   <div className="footer">
     <ul className="footer__list">
       <li>
-        <a className="footer__list-link twitter" href="https://twitter.com">
+        <a
+          className="footer__list-link icon-twitter icon-align-left"
+          href="https://twitter.com"
+        >
           Twitter
         </a>
       </li>
       <li>
-        <a className="footer__list-link dribble" href="https://dribbble.com/">
+        <a
+          className="footer__list-link icon-dribble icon-align-left"
+          href="https://dribbble.com/"
+        >
           Dribble
         </a>
       </li>
       <li>
-        <a className="footer__list-link icon__facebook" href="https://dribbble.com/">
+        <a
+          className="footer__list-link icon-facebook icon-align-left"
+          href="https://facebook.com/"
+        >
           Facebook
         </a>
       </li>
