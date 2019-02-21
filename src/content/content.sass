@@ -1,14 +1,19 @@
-@import '../application' 
+@import 'src/assets/stylesheets/base/variables'
+@import 'src/assets/stylesheets/base/breakpoints'
     
 .content
-    margin-top: $m-lg
+    padding-top: $m-lg
 
     &__description
         font-size: $font-xs
         font-smooth: antialiased
-        max-width: 50%
+        line-height: 1.5
+        padding-bottom: $m-base
+        +media-breakpoint-up(sm)
+            max-width: 50%
 
     &__portfolio
         display: flex
         flex-wrap: wrap
         justify-content: center
+        margin-right: -$m-base
