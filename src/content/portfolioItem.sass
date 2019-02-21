@@ -2,10 +2,7 @@
 
 .portfolio-item
     flex: 0 0 100%
-    padding: 0 $m-base $m-base 0
-    +media-breakpoint-up(sm)
-        flex: 0 0 33.33%    
-
+   
     &__content
         margin: $m-base 0
         +media-breakpoint-up(sm)
@@ -13,10 +10,17 @@
 
     &__subtitle
         color: $bright-grey
+        font-size: $font-xs
 
     &__title
         font-weight: bold
+        font-size: $font-xs
 
     &__image 
         max-height: 100%
         width: 100%
+
++media-breakpoint-up(sm)
+    .portfolio-item
+        flex: 0 0 33.33%    
+        padding: 0 $m-base $m-base 0

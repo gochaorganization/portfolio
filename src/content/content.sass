@@ -9,11 +9,16 @@
         font-smooth: antialiased
         line-height: 1.5
         padding-bottom: $m-base
-        +media-breakpoint-up(sm)
-            max-width: 50%
 
     &__portfolio
         display: flex
         flex-wrap: wrap
         justify-content: center
-        margin-right: -$m-base
+
++media-breakpoint-up(sm)
+    .content
+        &__description
+            max-width: 50%
+
+        &__portfolio
+            margin-right: -$m-base
