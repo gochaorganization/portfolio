@@ -9,11 +9,11 @@ import "./app.sass";
 class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Header />
         <Content />
         <Footer />
-      </div>
+      </React.Fragment>
     );
   }
 }

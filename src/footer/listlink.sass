@@ -1,0 +1,17 @@
+@import '../application'
+
+.list-link 
+    align-items: center
+    color: $grey
+    display: flex
+    font-size: $font-xs
+    margin: $m-xs 0   
+
+    &:before
+        display: inline-block
+        margin-right: $m-sm
+        width: $icon-size
+
++media-breakpoint-up(sm)
+    .list-link 
+        margin: 0 $m-xs       
