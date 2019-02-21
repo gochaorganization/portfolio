@@ -1,0 +1,45 @@
+@font-face 
+  font-family: 'icomoon'
+  src: local('icomoon'), url(./fonts/icomoon.woff?cuwrv2) format('woff'),
+  url(./fonts/icomoon.eot?cuwrv2),
+  url(./fonts/icomoon.eot?cuwrv2#iefix) format('embedded-opentype'),
+  url(./fonts/icomoon.ttf?cuwrv2) format('truetype'),
+  url(./fonts/icomoon.svg?cuwrv2#icomoon) format('svg')
+  font-weight: normal
+  font-style: normal
+
+=icon-settings
+  font:
+    family: 'icomoon'
+    size: $icon-size
+    style: normal
+    variant: normal
+    weight: normal
+  line-height: 1
+  speak: none
+  text-transform: none
+  -webkit-font-smoothing: antialiased
+  vertical-align: middle
+
+=icon($name, $content)
+  .#{$icon-class}#{$name},
+  %#{$icon-class}#{$name}
+    &:before
+      content: #{"\"\\"}#{$content + "\""}
+  
+[class*=#{$icon-class}]
+  &:active,
+  &:hover,
+  &:focus
+    text-decoration: none
+
+  &:before
+    +icon-settings
+
+  + *,
+  * + &
+    margin-left: $m-sm
+
++icon(facebook, 'ea91')
++icon(dribble, 'eaa7')
++icon(twitter, 'ea96')
