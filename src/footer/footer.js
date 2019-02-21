@@ -22,7 +22,7 @@ const Footer = () => (
       </li>
       <li>
         <a
-          className="footer__list-link icon-facebook icon-align-left"
+          className="footer__list-link icon-facebook"
           href="https://facebook.com/"
         >
           Facebook
@@ -31,7 +31,7 @@ const Footer = () => (
     </ul>
 
     <div className="footer__credentials">
-      Made by <span className="footer__credentials--red">Selleo</span>
+      Made by <span className="footer__credentials--danger">Selleo</span>
     </div>
   </div>
 );

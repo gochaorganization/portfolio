@@ -4,9 +4,6 @@
     display: flex    
     flex-direction: column
     justify-content: flex-start
-    +media-breakpoint-up(sm)
-        flex-direction: row
-        justify-content: space-between
 
     &__list
         display: flex
@@ -14,28 +11,38 @@
         list-style: none
         margin: 0
         padding: $m-base 0
-        +media-breakpoint-up(sm)
-            flex-direction: row
 
         &-link 
             align-items: center
             color: $grey
             display: flex
             font-size: $font-xs
-            margin: $m-xs 0
-            +media-breakpoint-up(sm)
-            margin: 0 $m-xs       
+            margin: $m-xs 0   
+
+            &:before
+                display: inline-block
+                margin-right: $m-sm
+                width: $icon-size
         
     &__credentials
         color: $grey
         font-size: $font-xs
-        +media-breakpoint-up(sm)
+
+        &--danger
+            color: $danger
+
+
+
++media-breakpoint-up(sm)
+    .footer
+        flex-direction: row
+        justify-content: space-between
+        
+        &__list        
+            flex-direction: row
+
+            &-link 
+                margin: 0 $m-xs       
+            
+        &__credentials
             align-self: center
-
-        &--red
-            color: $red
-
-.icon-align-left:before
-    display: inline-block
-    margin-right: $m-sm
-    width: $icon-size
