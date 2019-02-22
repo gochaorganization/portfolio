@@ -1,40 +1,61 @@
-import React from "react";
+import React, { Component } from "react";
+import _ from "lodash";
+import classNames from "classnames";
 
 import "./header.sass";
 
-const Header = () => (
-  <header className="header">
-    <a href="/" className="header__link">
-      Selleo
+const renderLink = ({ name, link }, key) => (
+  <li key={key}>
+    <a className="header__list-link" href={link}>
+      {name}
     </a>
-    <ul className="header__list">
-      <li>
-        <a className="header__list-link" href="#blog">
-          Blog
-        </a>
-      </li>
-      <li>
-        <a className="header__list-link" href="#guide">
-          Style Guide
-        </a>
-      </li>
-      <li>
-        <a className="header__list-link" href="#manuals">
-          Manuals
-        </a>
-      </li>
-      <li>
-        <a className="header__list-link" href="#pages">
-          Pages
-        </a>
-      </li>
-      <li>
-        <a className="header__list-link" href="#contacts">
-          Contacts
-        </a>
-      </li>
-    </ul>
-  </header>
+  </li>
 );
+
+class Header extends Component {
+  state = {
+    menuVisible: true,
+    links: [
+      { name: "Blog", link: "#blog" },
+      { name: "Style Guide", link: "#guide" },
+      { name: "Manuals", link: "#manuals" },
+      { name: "Pages", link: "#pages" },
+      { name: "Contacts", link: "#contacts" }
+    ]
+  };
+
+  toogleMenu = () => {
+    this.setState(prevState => ({
+      menuVisible: !prevState.menuVisible
+    }));
+  };
+
+  render() {
+    const { menuVisible, links } = this.state;
+
+    return (
+      <header className="header">
+        <div className="header-wrapper">
+          <a href="/" className="header__home">
+            Selleo
+          </a>
+          <span
+            className={classNames("header__menu", "icon-menu", {
+              active: !menuVisible
+            })}
+            onClick={this.toogleMenu}
+          />
+        </div>
+        <ul
+          className={classNames("header__list", {
+            hidden: menuVisible
+          })}
+        >
+          {_.map(links, (item, key) => renderLink(item, key))}
+        </ul>
+      </header>
+    );
+  }
+}
 
 export default Header;
