@@ -1,20 +1,61 @@
-@import '../application' 
-    
+@import '../application'
+
 .header
     display: flex
-    justify-content: space-between
-    
-    &__list
-        display: flex
-        list-style: none
+    flex-direction: column    
 
-        &-link    
-            color: $dark-grey
-            font-size: $font-xs
-            padding: $m-xs
-        
-    &__link
-        align-self: center
+    &__home
+        align-self: center    
         color: $black
         font-size: $font-lg
-        font-weight: bold
+        font-weight: $font-weight-bold    
+
+    &__list
+        display: flex
+        flex-direction: column
+        list-style: none
+        padding: 0
+        margin: 0
+               
+        &-link            
+            color: $grey
+            display: flex
+            font-size: $font-xs
+            justify-content: space-around
+            padding: $m-xs
+
+    &-wrapper
+        display: flex
+        justify-content: space-between
+
+    &__menu
+        &:before
+            color: $bright-grey
+            cursor: pointer
+            font-size: $menu-icon-size
+
+        &--active:before
+            color: $black
+
++media-breakpoint-up(sm)    
+    .header
+        flex-direction: row
+        justify-content: space-between
+
+        &__home
+            font-size: $font-base
+
+        &__list
+            display: flex
+            flex-direction: row
+
+        &__menu
+            display: none
+
+
++media-breakpoint-down(xs)  
+    .header__list
+        +visible
+
+        &--hidden
+            +invisible        
