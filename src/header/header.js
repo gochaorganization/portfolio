@@ -14,7 +14,7 @@ const renderLink = ({ name, link }, key) => (
 
 class Header extends Component {
   state = {
-    menuVisible: true,
+    menuVisible: false,
     links: [
       { name: "Blog", link: "#blog" },
       { name: "Style Guide", link: "#guide" },
@@ -41,14 +41,14 @@ class Header extends Component {
           </a>
           <span
             className={classNames("header__menu", "icon-menu", {
-              active: !menuVisible
+              "header__menu--active": !menuVisible
             })}
             onClick={this.toogleMenu}
           />
         </div>
         <ul
           className={classNames("header__list", {
-            hidden: menuVisible
+            "header__list--hidden": !menuVisible
           })}
         >
           {_.map(links, (item, key) => renderLink(item, key))}

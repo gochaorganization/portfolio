@@ -16,7 +16,7 @@
         list-style: none
         padding: 0
         margin: 0
-        
+               
         &-link            
             color: $grey
             display: flex
@@ -28,14 +28,13 @@
         display: flex
         justify-content: space-between
 
-    // ?
-    & &__menu
+    &__menu
         &:before
             color: $bright-grey
             cursor: pointer
             font-size: $menu-icon-size
 
-        &.active:before
+        &--active:before
             color: $black
 
 +media-breakpoint-up(sm)    
@@ -50,15 +49,15 @@
             display: flex
             flex-direction: row
 
-    &__menu
-        display: none
+        &__menu
+            display: none
 
-// ?
+
 +media-breakpoint-down(xs)  
     .header__list
         +visible
 
-        &.hidden
+        &--hidden
             +invisible
 
             
