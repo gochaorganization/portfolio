@@ -1,0 +1,22 @@
+=visible
+  +animate(opacity, max-height, visibility)
+  max-height: 1500px
+  opacity: 1
+  visibility: visible
+
+=invisible
+  +animate(opacity, max-height, visibility)
+  max-height: 0
+  opacity: 0
+  visibility: hidden
+
+=hover-visible
+  +visible
+  &:before, &:after
+    +visible
+
+=animate($property...) 
+  transition-duration: .3s
+  transition-property: $property
+  transition-timing-function: ease-in-out
+
