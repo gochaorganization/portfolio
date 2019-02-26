@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import _ from "lodash";
 import classNames from "classnames";
 
@@ -16,5 +17,12 @@ const ListLink = ({ link: { name, address } }) => (
     </a>
   </li>
 );
+
+ListLink.propTypes = {
+  link: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+  })
+}
 
 export default ListLink;

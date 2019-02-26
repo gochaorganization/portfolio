@@ -73,7 +73,7 @@ class Content extends Component {
     const { porfolio } = this.state;
 
     return (
-      <div className="content">
+      <main className="content">
         <h3>Portfolio Theme for Gosia :)</h3>
         <p className="content__description">
           Lorem ipsum dolor sit amet, saepe incorrupte reprehendunt ius cu, vis
@@ -83,7 +83,7 @@ class Content extends Component {
         <div className="content__portfolio">
           {_.map(porfolio, (item, key) => this.renderPortfolioItem(item, key))}
         </div>
-      </div>
+      </main>
     );
   }
 }
