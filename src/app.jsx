@@ -1,15 +1,17 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
-import Header from './header'
-import Content from './content'
-import Footer from './footer'
+import Header from './components/header'
+import Content from './components/content'
+import Footer from './components/footer'
 
 const App = () => (
-  <React.Fragment>
+  <Provider store={store}>
     <Header />
     <Content />
     <Footer />
-  </React.Fragment>
+  </Provider>
 )
 
 export default App

@@ -8,9 +8,9 @@ import './footer.sass'
 class Footer extends Component {
   state = {
     links: [
-      { name: 'twitter', link: 'https://twitter.com' },
-      { name: 'dribble', link: 'https://dribbble.com/' },
-      { name: 'facebook', link: 'https://facebook.com' },
+      { name: 'twitter', address: 'https://twitter.com' },
+      { name: 'dribble', address: 'https://dribbble.com/' },
+      { name: 'facebook', address: 'https://facebook.com' },
     ],
   }
 
