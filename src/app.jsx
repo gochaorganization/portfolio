@@ -1,19 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Header from "./header";
 import Content from "./content";
 import Footer from "./footer";
 
-class App extends Component {
-  render() {
-    return (
+const App = () => 
       <React.Fragment>
         <Header />
         <Content />
         <Footer />
       </React.Fragment>
-    );
-  }
-}
 
 export default App;

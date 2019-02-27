@@ -20,7 +20,6 @@ class Footer extends Component {
 
   render() {
     const { links } = this.state;
-
     return (
       <footer className="footer">
         <ul className="footer__list">

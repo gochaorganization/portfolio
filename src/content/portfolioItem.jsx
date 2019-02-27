@@ -1,12 +1,12 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-
 import React from "react";
+import PropTypes from 'prop-types';
+
 import "./portfolioItem.sass";
 
 const PortfolioItem = ({ portfolio: { src, title, subtitle } }) => {
   return (
     <div className="portfolio-item">
-      <img className="portfolio-item__image" src={src} alt="Portfolio image" />
+      <img className="portfolio-item__image" alt="" src={src}/>
       <div className="portfolio-item__content">
         <div className="portfolio-item__title">{title}</div>
         <div className="portfolio-item__subtitle">{subtitle}</div>
@@ -14,5 +14,13 @@ const PortfolioItem = ({ portfolio: { src, title, subtitle } }) => {
     </div>
   );
 };
+
+PortfolioItem.propTypes = {
+  portfolio: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+  })
+}
 
 export default PortfolioItem;

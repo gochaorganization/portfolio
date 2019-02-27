@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
+
 import _ from "lodash";
 import classNames from "classnames";
 
-import "./header.sass";
+import './header.sass'
 
 const renderLink = ({ name, link }, key) => (
   <li key={key}>
@@ -12,7 +14,12 @@ const renderLink = ({ name, link }, key) => (
   </li>
 );
 
-class Header extends Component {
+renderLink.propTypes = {
+  name: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+}
+
+class Header extends Component {      
   state = {
     menuVisible: false,
     links: [
@@ -22,13 +29,13 @@ class Header extends Component {
       { name: "Pages", link: "#pages" },
       { name: "Contacts", link: "#contacts" }
     ]
-  };
+  }
 
   toogleMenu = () => {
     this.setState(prevState => ({
       menuVisible: !prevState.menuVisible
-    }));
-  };
+    }))
+  }
 
   render() {
     const { menuVisible, links } = this.state;
@@ -39,7 +46,7 @@ class Header extends Component {
           <a href="/" className="header__home">
             Selleo
           </a>
-          <span
+          <span role="button" tabIndex="0"
             className={classNames("header__menu", "icon-menu", {
               "header__menu--active": !menuVisible
             })}
@@ -57,5 +64,8 @@ class Header extends Component {
     );
   }
 }
+
+
+
 
 export default Header;
