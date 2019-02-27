@@ -1,0 +1,27 @@
+@import '../application' 
+
+.portfolio-item
+    flex: 0 0 100%
+   
+    &__content
+        margin: $m-base 0
+        +media-breakpoint-up(sm)
+            display: none
+
+    &__subtitle, &__title
+        font-size: $font-xs
+
+    &__subtitle
+        color: $bright-grey
+
+    &__title
+        font-weight: $font-weight-bold
+
+    &__image 
+        max-height: 100%
+        width: 100%
+
++media-breakpoint-up(sm)
+    .portfolio-item
+        flex: 0 0 33.33%    
+        padding: 0 $m-base $m-base 0

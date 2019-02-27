@@ -1,0 +1,25 @@
+@import 'src/assets/stylesheets/base/variables'
+@import 'src/assets/stylesheets/base/breakpoints'
+    
+.content
+    padding-top: $m-lg
+
+    &__description
+        color: $grey
+        font-size: $font-xs
+        font-smooth: antialiased
+        line-height: 1.5
+        padding-bottom: $m-base
+
+    &__portfolio
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
++media-breakpoint-up(sm)
+    .content
+        &__description
+            max-width: 50%
+
+        &__portfolio
+            margin-right: -$m-base

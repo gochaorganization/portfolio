@@ -1,0 +1,47 @@
+@import '../application'
+
+.footer
+    display: flex    
+    flex-direction: column
+    justify-content: flex-start
+
+    &__list
+        display: flex
+        flex-direction: column
+        list-style: none
+        margin: 0
+        padding: 0 0 $m-base
+
+        &-link 
+            align-items: center
+            color: $dark-grey
+            display: flex
+            font-size: $font-xs
+            margin: $m-xs 0   
+
+            &:before
+                display: inline-block
+                margin-right: $m-sm
+                width: $icon-size
+        
+    &__credentials
+        color: $grey
+        font-size: $font-xs
+
+        &--danger
+            color: $danger
+
++media-breakpoint-up(sm)
+    .footer
+        flex-direction: row
+        justify-content: space-between
+        
+        &__list        
+            flex-direction: row
+            padding: 0 
+
+            &-link 
+                margin: 0 $m-xs       
+            
+        &__credentials
+            align-self: center
