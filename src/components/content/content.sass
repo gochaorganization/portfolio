@@ -1,8 +1,15 @@
 @import 'src/assets/stylesheets/base/variables'
 @import 'src/assets/stylesheets/base/breakpoints'
+@import 'src/assets/stylesheets/base/mixins'
     
 .content
     padding-top: $m-lg
+
+    &__button
+        margin-bottom: $m-base
+
+    &__form
+        +visible
 
     &__description
         color: $grey
@@ -15,6 +22,9 @@
         display: flex
         flex-wrap: wrap
         justify-content: center
+        
+    &__form--hidden
+        +invisible
 
 +media-breakpoint-up(sm)
     .content

@@ -23,12 +23,8 @@ renderLink.propTypes = {
 }
 
 class Header extends Component {
-  propTypes = {
-    headerLinks: PropTypes.array.isRequired
-  }
-
   state = {
-    menuVisible: false,    
+    menuVisible: false,
   }
 
   toogleMenu = () => {
@@ -39,7 +35,7 @@ class Header extends Component {
 
   render() {
     const { menuVisible } = this.state
-    const {headerLinks} = this.props 
+    const { headerLinks } = this.props
 
     return (
       <header className="header">
@@ -68,6 +64,9 @@ class Header extends Component {
   }
 }
 
+Header.propTypes = {
+  headerLinks: PropTypes.array.isRequired,
+}
+
 const mapStateToProps = () => portfolio
 export default connect(mapStateToProps)(Header)
-

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import _ from 'lodash'
@@ -10,10 +10,6 @@ import ListLink from './listlink'
 import './footer.sass'
 
 class Footer extends Component {
-  propTypes = {
-    footerLinks: PropTypes.array.isRequired
-  }
-
   renderLink = (link, key) => {
     return <ListLink key={key} link={link} />
   }
@@ -32,6 +28,10 @@ class Footer extends Component {
       </footer>
     )
   }
+}
+
+Footer.propTypes = {
+  footerLinks: PropTypes.array.isRequired,
 }
 
 const mapStateToProps = () => portfolio
