@@ -9,7 +9,7 @@ import PortfolioItem from './portfolioItem'
 import './content.sass'
 
 class Content extends Component {
-  PropTypes = {
+  propTypes = {
     images: PropTypes.array.isRequired
   }
 
