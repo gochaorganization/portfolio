@@ -1,0 +1,28 @@
+@import 'src/assets/stylesheets/base/variables'   
+@import 'src/assets/stylesheets/base/breakpoints' 
+@import 'src/assets/stylesheets/base/mixins'    
+
+.form
+    display: flex
+    flex-direction: column
+
+    & .form__field-wrapper
+        display: flex
+        align-items: center
+
+    & .form__field
+        flex: 10
+        font-size: $font-xs
+        margin: $m-xs 0
+
+    & .form__field-description
+        flex: 2
+        font-size: $font-xs
+
+    & button
+        margin: $m-xs auto $m-base        
+        padding: $m-xs
+
++media-breakpoint-up(md)
+    .form
+        width: 50%

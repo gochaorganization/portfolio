@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
@@ -7,10 +7,11 @@ import portfolio from 'redux/reducers/portfolio'
 import PortfolioItem from './portfolioItem'
 
 import './content.sass'
+import AddImageForm from './addImageForm'
 
 class Content extends Component {
   propTypes = {
-    images: PropTypes.array.isRequired
+    images: PropTypes.array.isRequired,
   }
 
   renderPortfolioItem = (item, key) => {
@@ -31,6 +32,7 @@ class Content extends Component {
         <div className="content__portfolio">
           {_.map(images, (item, key) => this.renderPortfolioItem(item, key))}
         </div>
+        <AddImageForm />
       </main>
     )
   }
