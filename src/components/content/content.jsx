@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import _ from 'lodash'
-import classNames from 'classnames'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import classNames from 'classnames';
 
-import portfolio from 'redux/reducers/portfolio'
-import PortfolioItem from './portfolioItem'
+import portfolio from 'redux/reducers/portfolio';
+import PortfolioItem from './portfolioItem';
 
-import './content.sass'
-import AddImageForm from './addImageForm'
+import './content.sass';
+import AddImageForm from './addImageForm';
 
 class Content extends Component {
   state = {
@@ -18,18 +18,18 @@ class Content extends Component {
   handeSubmit = () => {}
 
   renderPortfolioItem = (item, key) => {
-    return <PortfolioItem key={key} portfolio={item} />
+    return <PortfolioItem key={key} portfolio={item} />;
   }
 
   toggleFormVisibility = () => {
     this.setState(prevState => ({
       formVisible: !prevState.formVisible,
-    }))
+    }));
   }
 
   render() {
-    const { images } = this.props
-    const { formVisible } = this.state
+    const { images } = this.props;
+    const { formVisible } = this.state;
 
     return (
       <main className="content">
@@ -60,13 +60,13 @@ class Content extends Component {
           <AddImageForm />
         </div>
       </main>
-    )
+    );
   }
 }
 
 Content.propTypes = {
   images: PropTypes.array.isRequired,
-}
+};
 
-const mapStateToProps = () => portfolio
-export default connect(mapStateToProps)(Content)
+const mapStateToProps = () => portfolio;
+export default connect(mapStateToProps)(Content);

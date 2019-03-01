@@ -6,9 +6,9 @@
     display: flex
     flex-direction: column
 
-    & .form__field-wrapper
-        display: flex
-        align-items: center
+    & button
+        margin: $m-xs auto $m-base        
+        padding: $m-xs
 
     & .form__field
         flex: 10
@@ -19,9 +19,9 @@
         flex: 2
         font-size: $font-xs
 
-    & button
-        margin: $m-xs auto $m-base        
-        padding: $m-xs
+    & .form__field-wrapper
+        align-items: center
+        display: flex
 
 +media-breakpoint-up(md)
     .form
