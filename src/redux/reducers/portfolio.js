@@ -67,10 +67,10 @@ const initalState = {
         { name: 'Pages', link: '#pages' },
         { name: 'Contacts', link: '#contacts' },
       ],
-}
+};
 
 function portfolio(state = initalState, action){
     return state;
 }
 
-export default portfolio
+export default portfolio;
