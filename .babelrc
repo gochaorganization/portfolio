@@ -5,7 +5,8 @@
       {
         "root": ["./src"],
         "alias": {
-          "redux": "./src/redux"
+          "redux": "./src/redux",
+          "fonts": "./src/fonts"
         }
       }
     ],

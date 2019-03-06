@@ -13,7 +13,29 @@ module.exports = {
     rules: [
       {
         test: /\.(scss|sass)/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
+        use: [
+          'style-loader',
+          'css-loader',
+          'resolve-url-loader',
+          'postcss-loader',
+          'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: ['./src/_application.sass'],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
@@ -44,7 +66,7 @@ module.exports = {
 
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.sass', '.scss', '.woff2'],
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({ options: {} }),
