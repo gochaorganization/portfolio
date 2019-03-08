@@ -1,16 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Field, reduxForm } from 'redux-form'
+import { portfolio as formReducer } from 'redux-form'
 
 import './addImageForm.sass'
 
 const Form = props => {
   const { handleSubmit } = props
+
   return (
-    <form
-      className="form"
-      onSubmit={handleSubmit}
-    >
+    <form className="form" onSubmit={handleSubmit}>
       <div className="form__field-wrapper">
         <label className="form__field-description" htmlFor="title">
           Title
@@ -54,8 +53,8 @@ Form.propTypes = {
 }
 
 const AddImageForm = reduxForm({
-  // a unique name for the form
   form: 'addImage',
+  fields: ['path', 'title', 'subtitle'],
 })(Form)
 
 export default AddImageForm

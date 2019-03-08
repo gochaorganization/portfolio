@@ -68,5 +68,8 @@ Header.propTypes = {
   headerLinks: PropTypes.array.isRequired,
 }
 
-const mapStateToProps = () => portfolio
+const mapStateToProps = ({ portfolio: { headerLinks } }) => ({
+  headerLinks,
+})
+
 export default connect(mapStateToProps)(Header)

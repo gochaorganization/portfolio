@@ -34,5 +34,8 @@ Footer.propTypes = {
   footerLinks: PropTypes.array.isRequired,
 }
 
-const mapStateToProps = () => portfolio
+const mapStateToProps = ({ portfolio: { footerLinks } }) => ({
+  footerLinks,
+})
+
 export default connect(mapStateToProps)(Footer)

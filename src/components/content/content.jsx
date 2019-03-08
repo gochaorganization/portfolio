@@ -6,16 +6,23 @@ import classNames from 'classnames'
 
 import portfolio from 'redux/reducers/portfolio'
 import PortfolioItem from './portfolioItem'
+import AddImageForm from './addImageForm'
+import { addImage } from 'redux/actions/actions'
 
 import './content.sass'
-import AddImageForm from './addImageForm'
 
 class Content extends Component {
   state = {
     formVisible: false,
   }
 
-  handeSubmit = () => {}
+  handleSubmit = values => {
+    this.addImage(values)
+  }
+
+  addImage = payload => {
+    addImage(payload)
+  }
 
   renderPortfolioItem = (item, key) => {
     return <PortfolioItem key={key} portfolio={item} />
@@ -57,7 +64,7 @@ class Content extends Component {
             }
           )}
         >
-          <AddImageForm />
+          <AddImageForm onSubmit={this.handleSubmit} />
         </div>
       </main>
     )
@@ -66,7 +73,15 @@ class Content extends Component {
 
 Content.propTypes = {
   images: PropTypes.array.isRequired,
+  // addImage: PropTypes.func.isRequired,
 }
 
-const mapStateToProps = () => portfolio
+const mapStateToProps = ({ portfolio: { images } }) => ({
+  images,
+})
+
+const mapDispatchToProps = {
+  addImage,
+}
+
 export default connect(mapStateToProps)(Content)

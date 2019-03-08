@@ -1,10 +1,17 @@
-import { createStore } from 'redux';
-import portfolio from './reducers/portfolio';
+import { createStore, combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
+
+import portfolio from './reducers/portfolio'
 
 // eslint-disable-next-line no-underscore-dangle
-const store = createStore(
+const rootReducer = combineReducers({
   portfolio,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+  form: formReducer,
+})
 
-export default store;
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+export default store
