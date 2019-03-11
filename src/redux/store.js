@@ -3,7 +3,6 @@ import { reducer as formReducer } from 'redux-form'
 
 import portfolio from './reducers/portfolio'
 
-// eslint-disable-next-line no-underscore-dangle
 const rootReducer = combineReducers({
   portfolio,
   form: formReducer,

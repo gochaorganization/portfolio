@@ -1,21 +1,50 @@
 {
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["react", "jsx-a11y", "import"],
   "env": {
-    "browser": false,
-    "commonjs": true,
-    "es6": true
+    "browser": true,
+    "jest": true
   },
-  "extends": ["plugin:react/recommended"],
+  "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
       "jsx": true
-    },
-    "sourceType": "module"
+    }
   },
-  "plugins": ["react"],
   "rules": {
-    "react/jsx-indent": ["error", 2],
-    "linebreak-style": ["error", "unix"]
+    "function-paren-newline": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+    "no-else-return": ["off"],
+    "no-param-reassign": ["error", { "props": false }],
+    "object-curly-newline": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/no-access-state-in-setstate": "off",
+    "react/no-array-index-key": "off",
+    "react/no-typos": ["error"],
+    "react/no-unused-state": ["error"],
+    "react/require-default-props": "off",
+    "react/require-extension": "off",
+    "no-underscore-dangle": [
+      "error",
+      { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }
+    ],
+    "react/forbid-prop-types": [
+      1,
+      {
+        "forbid": ["object"]
+      }
+    ],
+    "unicorn/number-literal-case": "off"
   },
-  "parser": "babel-eslint"
+  "globals": {
+    "__ROLLBAR_ACCESS_TOKEN__": false,
+    "__GIT_REVISION__": false
+  }
 }

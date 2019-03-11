@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import { ADD_IMAGE } from '../actions/actions'
 
 const initalState = {
@@ -73,12 +74,13 @@ const initalState = {
 
 function portfolio(state = initalState, action) {
   switch (action.type) {
-    case ADD_IMAGE:
+    case ADD_IMAGE: {
       const id = _.max(_.map(state.images, 'id')) + 1
       return { ...state, images: [...state.images, { id, ...action.payload }] }
+    }
+    default:
+      return state
   }
-
-  return state
 }
 
 export default portfolio
