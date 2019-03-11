@@ -17,11 +17,7 @@ class Content extends Component {
   }
 
   handleSubmit = values => {
-    this.addImage(values)
-  }
-
-  addImage = payload => {
-    addImage(payload)
+    this.props.addImage(values)
   }
 
   renderPortfolioItem = (item, key) => {
@@ -73,7 +69,7 @@ class Content extends Component {
 
 Content.propTypes = {
   images: PropTypes.array.isRequired,
-  // addImage: PropTypes.func.isRequired,
+  addImage: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = ({ portfolio: { images } }) => ({
@@ -84,4 +80,7 @@ const mapDispatchToProps = {
   addImage,
 }
 
-export default connect(mapStateToProps)(Content)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Content)

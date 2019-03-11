@@ -74,8 +74,8 @@ const initalState = {
 function portfolio(state = initalState, action) {
   switch (action.type) {
     case ADD_IMAGE:
-      console.log(action.payload)
-      debugger
+      const id = _.max(_.map(state.images, 'id')) + 1
+      return { ...state, images: [...state.images, { id, ...action.payload }] }
   }
 
   return state
