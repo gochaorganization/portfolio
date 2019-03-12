@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import _ from 'lodash'
 
-import portfolio from 'redux/reducers/portfolio'
 import ListLink from './listlink'
 
 import './footer.sass'

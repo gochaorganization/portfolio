@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import _ from 'lodash'
 import classNames from 'classnames'
 
-import portfolio from 'redux/reducers/portfolio'
-
 import './header.sass'
 
 const renderLink = ({ name, link }, key) => (

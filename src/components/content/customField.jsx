@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 
 import './customField.sass'
 
-const CustomField = ({ input, label, type, meta: { touched, error } }) => (
+const CustomField = ({
+  input,
+  label,
+  type,
+  meta: { touched, error },
+  name,
+}) => (
   <div className="form-field">
     <label className="form-field__description" htmlFor={name}>
       {label}
@@ -16,7 +22,8 @@ const CustomField = ({ input, label, type, meta: { touched, error } }) => (
 )
 
 CustomField.propTypes = {
-  input: PropTypes.object,
+  input: PropTypes.element,
+  name: PropTypes.string.isRequired,
   label: PropTypes.string,
   type: PropTypes.string,
   meta: PropTypes.shape({ touched: PropTypes.bool, error: PropTypes.string }),

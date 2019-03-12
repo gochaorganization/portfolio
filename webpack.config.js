@@ -28,7 +28,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        test: /\.(woff2?|ttf|otf|eot|svg|woff)$/,
         exclude: /node_modules/,
         use: [
           {

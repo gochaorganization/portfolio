@@ -4,10 +4,9 @@ import { connect } from 'react-redux'
 import _ from 'lodash'
 import classNames from 'classnames'
 
-import portfolio from 'redux/reducers/portfolio'
+import { addImage } from 'redux/actions/actions'
 import PortfolioItem from './portfolioItem'
 import AddImageForm from './addImageForm'
-import { addImage } from 'redux/actions/actions'
 
 import './content.sass'
 

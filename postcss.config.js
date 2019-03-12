@@ -1,9 +1,13 @@
-module.exports = ({ file, options, env }) => ({
-  parser: file.extname === '.sss' ? 'sugarss' : false,
-  plugins: {
-    'postcss-import': {},
-    'postcss-preset-env': {},
-    cssnano: {},
-    cssnano: env === 'production' ? {} : false,
-  },
-})
+// module.exports = ({ file, options, env }) => ({
+//   parser: file.extname === '.sss' ? 'sugarss' : false,
+//   plugins: {
+//     'postcss-import': {},
+//     'postcss-preset-env': {},
+//     cssnano: env === 'production' ? {} : false,
+//     autoprefixer: {},
+//   },
+// })
+
+module.exports = {
+  plugins: [require('autoprefixer')],
+}
