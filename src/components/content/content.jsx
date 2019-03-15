@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
@@ -9,12 +9,12 @@ import PortfolioItem from './portfolioItem'
 import './content.sass'
 
 class Content extends Component {
-  propTypes = {
-    images: PropTypes.array.isRequired
+  static propTypes = {
+    images: PropTypes.array.isRequired,
   }
 
-  renderPortfolioItem = (item, key) => {
-    return <PortfolioItem key={key} portfolio={item} />
+  renderPortfolioItem = item => {
+    return <PortfolioItem key={item.id} portfolio={item} />
   }
 
   render() {
@@ -29,7 +29,7 @@ class Content extends Component {
           Virtute consetetur et mei, ne amet salutandi cotidieque eam.
         </p>
         <div className="content__portfolio">
-          {_.map(images, (item, key) => this.renderPortfolioItem(item, key))}
+          {_.map(images, item => this.renderPortfolioItem(item))}
         </div>
       </main>
     )
