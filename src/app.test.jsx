@@ -1,18 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { shallow, render } from 'enzyme'
-import Footer from './components/footer'
-// import ListLink from './components/footer/listlink'
+import { shallow } from 'enzyme'
+import { Footer } from './components/footer/footer'
 
-// it('renders without crashing', () => {
-//   const div = document.createElement('div')
-//   ReactDOM.render(<Footer />, div)
-//   ReactDOM.unmountComponentAtNode(div)
-// })
+describe('basic tests', () => {
+  it('has links', () => {
+    const wrapper = shallow(<Footer />)
+    console.log(wrapper.debug())
 
-it('has links', () => {
-  const wrapper = shallow(<Footer />)
-  console.log(wrapper.debug())
-
-  expect(wrapper.find('.footer__list').exists()).toBe(true)
+    expect(wrapper.find('.footer__list').exists()).toBeTruthy()
+  })
 })

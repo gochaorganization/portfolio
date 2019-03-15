@@ -7,7 +7,7 @@ import ListLink from './listlink'
 
 import './footer.sass'
 
-class Footer extends Component {
+export class Footer extends Component {
   renderLink = (link, key) => {
     return <ListLink key={key} link={link} />
   }
