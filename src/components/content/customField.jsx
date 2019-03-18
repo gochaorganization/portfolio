@@ -22,8 +22,8 @@ const CustomField = ({
 )
 
 CustomField.propTypes = {
-  input: PropTypes.element,
-  name: PropTypes.string.isRequired,
+  input: PropTypes.object,
+  name: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
   meta: PropTypes.shape({ touched: PropTypes.bool, error: PropTypes.string }),

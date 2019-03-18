@@ -20,7 +20,7 @@ renderLink.propTypes = {
   link: PropTypes.string.isRequired,
 }
 
-class Header extends Component {
+export class Header extends Component {
   state = {
     menuVisible: false,
   }
