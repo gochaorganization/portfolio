@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import _ from 'lodash'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 
 import portfolio from 'redux/reducers/portfolio'
 
@@ -11,9 +12,9 @@ import './header.sass'
 
 const renderLink = ({ name, link }, key) => (
   <li key={key}>
-    <a className="header__list-link" href={link}>
+    <Link className="header__list-link" to={link}>
       {name}
-    </a>
+    </Link>
   </li>
 )
 
