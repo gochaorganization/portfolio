@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
 import _ from 'lodash'
 
+import portfolio from 'redux/reducers/portfolio'
 import ListLink from './listlink'
 
 import './footer.sass'
 
 class Footer extends Component {
-  state = {
-    links: [
-      { name: 'twitter', link: 'https://twitter.com' },
-      { name: 'dribble', link: 'https://dribbble.com/' },
-      { name: 'facebook', link: 'https://facebook.com' },
-    ],
+  static propTypes = {
+    footerLinks: PropTypes.array.isRequired,
   }
 
   renderLink = (link, key) => {
@@ -19,11 +19,11 @@ class Footer extends Component {
   }
 
   render() {
-    const { links } = this.state
+    const { footerLinks } = this.props
     return (
       <footer className="footer">
         <ul className="footer__list">
-          {_.map(links, (item, key) => this.renderLink(item, key))}
+          {_.map(footerLinks, (item, key) => this.renderLink(item, key))}
         </ul>
 
         <div className="footer__credentials">
@@ -34,4 +34,5 @@ class Footer extends Component {
   }
 }
 
-export default Footer
+const mapStateToProps = () => portfolio
+export default connect(mapStateToProps)(Footer)

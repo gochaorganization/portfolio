@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import _ from 'lodash'
 import classNames from 'classnames'
+
+import portfolio from 'redux/reducers/portfolio'
 
 import './header.sass'
 
@@ -20,15 +23,12 @@ renderLink.propTypes = {
 }
 
 class Header extends Component {
+  static propTypes = {
+    headerLinks: PropTypes.array.isRequired,
+  }
+
   state = {
     menuVisible: false,
-    links: [
-      { name: 'Blog', link: '#blog' },
-      { name: 'Style Guide', link: '#guide' },
-      { name: 'Manuals', link: '#manuals' },
-      { name: 'Pages', link: '#pages' },
-      { name: 'Contacts', link: '#contacts' },
-    ],
   }
 
   toogleMenu = () => {
@@ -38,7 +38,8 @@ class Header extends Component {
   }
 
   render() {
-    const { menuVisible, links } = this.state
+    const { menuVisible } = this.state
+    const { headerLinks } = this.props
 
     return (
       <header className="header">
@@ -60,11 +61,12 @@ class Header extends Component {
             'header__list--hidden': !menuVisible,
           })}
         >
-          {_.map(links, (item, key) => renderLink(item, key))}
+          {_.map(headerLinks, (item, key) => renderLink(item, key))}
         </ul>
       </header>
     )
   }
 }
 
-export default Header
+const mapStateToProps = () => portfolio
+export default connect(mapStateToProps)(Header)
