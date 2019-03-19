@@ -14,7 +14,7 @@ describe('Header tests', () => {
   }
 
   test('renders correctly', () => {
-    const wrapper = shallow(<Header />)
+    const wrapper = shallow(<Header {...props} />)
     expect(wrapper).toMatchSnapshot()
   })
 

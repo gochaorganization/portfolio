@@ -23,7 +23,7 @@ const validate = values => {
   return errors
 }
 
-const Form = props => {
+export const Form = props => {
   const { handleSubmit } = props
 
   return (

@@ -10,7 +10,7 @@ import AddImageForm from './addImageForm'
 
 import './content.sass'
 
-class Content extends Component {
+export class Content extends Component {
   state = {
     formVisible: false,
   }

@@ -37,11 +37,11 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loaders: 'eslint-loader',
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   loaders: 'eslint-loader',
+      // },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
