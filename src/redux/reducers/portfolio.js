@@ -62,10 +62,10 @@ const initalState = {
   ],
   headerLinks: [
     { name: 'Blog', link: '/' },
-    { name: 'Gallery', link: 'gallery' },
-    { name: 'Manuals', link: 'manuals' },
-    { name: 'Pages', link: 'pages' },
-    { name: 'Contacts', link: 'contacts' },
+    { name: 'Gallery', link: '/gallery' },
+    { name: 'Manuals', link: '/manuals' },
+    { name: 'Pages', link: '/pages' },
+    { name: 'Contacts', link: '/contacts' },
   ],
 }
 
