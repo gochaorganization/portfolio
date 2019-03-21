@@ -25,12 +25,7 @@ describe('Footer tests', () => {
   test('menu link renders correctly', () => {
     const footer = mount(<Footer {...props} />)
 
-    console.log(
-      footer
-        .find(ListLink)
-        .at(0)
-        .text()
-    )
+    
     expect(
       footer
         .find(ListLink)

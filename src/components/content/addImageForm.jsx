@@ -5,7 +5,7 @@ import CustomField from './customField'
 
 import './addImageForm.sass'
 
-const validate = values => {
+export const validate = values => {
   const errors = {}
   if (!values.title) {
     errors.title = 'Required'

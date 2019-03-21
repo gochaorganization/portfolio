@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+// import configureMockStore from 'redux-mock-store'
+import { shallow, mount } from 'enzyme'
 import { Header } from '../header'
 
 describe('Header tests', () => {
@@ -42,11 +43,6 @@ describe('Header tests', () => {
 
     expect(wrapper.state().menuVisible).toBeTruthy()
   })
-
-  //   test('dataTypes matches propTypes', () => {
-  //     const wrapper = shallow(<Header {...props} />)
-  //     wrapper.props.headerLinks.toBeArray()
-  //   })
 })
 
 /*

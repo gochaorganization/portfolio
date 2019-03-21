@@ -13,7 +13,7 @@ describe('redux tests', () => {
     images: [],
   }
 
-  it('checks addImage action', () => {
+  it('should check addImage action', () => {
     const expectedAction = {
       type: ADD_IMAGE,
       payload: image,
@@ -22,11 +22,20 @@ describe('redux tests', () => {
     expect(addImage(image)).toEqual(expectedAction)
   })
 
-  it('checks if addImage is working', () => {
+  it('should check if addImage is working', () => {
     const testImages = portfolio(state, addImage(image))
-    console.log(testImages)
     expect(testImages).toEqual({
       images: [{ ...image, id: 1 }],
     })
+  })
+
+  it('should check initial state', () => {
+    const otherActions = {
+      type: 'OTHER',
+      payload: {},
+    }
+
+    const testImages = portfolio(undefined, otherActions)
+    expect(testImages.images).toHaveLength(9)
   })
 })

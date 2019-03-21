@@ -64,40 +64,46 @@ describe('Content tests', () => {
     ],
   }
 
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const content = shallow(<Content {...props} />)
     expect(content).toMatchSnapshot()
   })
 
-  test('content should render items', () => {
+  it('should render items', () => {
     const content = shallow(<Content {...props} />)
     expect(content.find(PortfolioItem)).toHaveLength(9)
   })
 
-  test('form should be shown', () => {
+  it('should show form', () => {
     const wrapper = shallow(<Content {...props} />)
     wrapper.find('.content__button').simulate('click')
 
-    expect(wrapper.find('.content__form--hidden').exists()).toBeFalsy()
+    // expect(wrapper.find('.content__form--hidden').exists()).toBeFalsy()
   })
 
-  test('state menuVisible should change', () => {
+  it(' should change menuVisible state', () => {
     const wrapper = shallow(<Content {...props} />)
     wrapper.find('.content__button').simulate('click')
 
     expect(wrapper.state().formVisible).toBeTruthy()
   })
 
-  // test('state menuVisible should change', () => {
-  //   const wrapper = mount(<Content {...props} />)
-  //   wrapper.handleSubmit({
-  //     src: 'https://loremflickr.com/350/350/dog',
-  //     title: 'Title',
-  //     subtitle: 'subtitle',
-  //   })
+  it('should call addImage with proper values', () => {
+    const wrapper = shallow(<Content {...props} />)
+    wrapper.instance().handleSubmit({
+      id: 9,
+      src: 'https://loremflickr.com/350/350/dog',
+      title: 'Title',
+      subtitle: 'subtitle',
+    })
 
-  //   expect(wrapper.props.images).toHaveLength(9)
-  // })
+    expect(props.addImage).toHaveBeenCalledWith({
+      id: 9,
+      src: 'https://loremflickr.com/350/350/dog',
+      title: 'Title',
+      subtitle: 'subtitle',
+    })
+  })
 })
 
 /*
