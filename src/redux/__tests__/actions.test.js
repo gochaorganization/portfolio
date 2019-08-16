@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable import/no-unresolved */
 import { addImage, ADD_IMAGE } from 'redux/actions/actions'
 import portfolio from 'redux/reducers/portfolio'
 
