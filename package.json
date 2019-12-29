@@ -2,6 +2,9 @@
   "name": "gosia-html",
   "version": "0.1.0",
   "watch": true,
+  "engines": {
+    "node": "10.15.x"
+  },
   "dependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "7.3.4",
