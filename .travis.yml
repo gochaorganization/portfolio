@@ -13,7 +13,6 @@ addons:
       - libgconf-2-4
 
 install:
-  - cp .npmrc.template $HOME/.npmrc
   - yarn install --frozen-lockfile
 
 before_install:
