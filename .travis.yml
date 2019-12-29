@@ -2,22 +2,19 @@ language: node_js
 node_js: 10.15
 cache:
   yarn: true
-
 addons:
   apt:
     packages:
       - libgconf-2-4
-
 install:
   - yarn install
-
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
   - export PATH="$HOME/.yarn/bin:$PATH"
-# https://docs.travis-ci.com/user/build-matrix/
 
 deploy:
   provider: heroku
   api_key:
-    secure: VOG119eZROB5PHcC9++3Vuq/UI1gPHmZHJOSIu0/yhs71uJbuIyt4PeQyPCj5hMe6EXKh+2ANOe7C/yrAfEo7n98N/KjkGb1GuPSUFuov3UaMg1/5pgvtyC/R1su34GnsvwNvXfX0T37tWxJT1xS7AzOM2txBfzTI+Hj1YH6Wxs1UBhOQ+8O58tKxpXTiZKrbWVwECiiDBb4G76iVmCcRxHic3lis0WsaRwUReQy2XjWp2VDi6eOi21eM9sCE79LvH9woooocvAx7KwIkk/IENqLcicbDns0yYkoDlYzqOaGm0qBu4itaYYtBmruq1VlM3CQCaD7WWs0/wgUYfBiKbt2+LrV6JRP1ViSw9rsl5HOR7UCLQwvkLJum7XP7+GPIUNQ+i7BE2+JEkIouqIvza47cCHA3HeYxb6YL66wCxhBDthEU0/J86APSzA1kgDATkTRWiCCrCSe5iT6JJpvX0TePZRAT3IzusqGwb/5qMkXlJyFO8jBCZlXgzBpVzSFBjI/TA3M5VRV2CFgVGaWba+0yHbpYJ9FiYjeqy87lJ5rwfvwfGUd2MNZuZVB9QoetMWc2yfO16fsTCoP/E0ZuN6VZoIoYvv7aoACeB7dCWvP8MceNFREy0+sHG+wm3KGj9nXGIZLTMLyrSsqrxK9QexqLvkNbyjcGoDv3Pfmdbg=
-  app: portfolio1001
+    secure: f1sN6czDEcFMoypgO27eDYe6TKB4EslPoTLQKvT9/VJwXZLq603IwWF1VMPM+crpHW/FNzGs5kmKarj3CIBDn1r7xdruFqphok7ohJVrb2sjINvvMeymMjCxSPY68CqUv1535xIFCXNQ4DMF9fH6bOvcNo011WaUZOm5bWSkh4zmGcvs55tAUgbdGvXvbwNNzBq4nIPlW9nNa4BujgozBnGx7KrG5n58PLNfqusl+fkRN4uuJ0EzJ5dnJ0YDFZTUbS3pCjQWa7M5h5Ri6+84kqekV4pgaNed2s+spUJoLDn//zD4dwJ0cghCe08MjtmbjuZJDKyyzpXDCRhmt3blqZUHiDwf1cXkDD/qwgHgMBODUApJ25wWvJhhInGROo+4TxPMdLMn1C6oar0cSdFmV/pYbvF11ZjhiiS5fbNcJrUSCvncdxvuSQgSZjAYhIUtwpX/dF1qvcWZK5jKn9+pOdKtYGcfqPPAWqGDaTWoKmyV8UF7lEXbIotme/9WfqmjuIBjSk+byO7k5xG2+6T0YAiJVeIn2xfBtkOmttOo6eTn5UDw7yAj5FypmhfXi6SVtlBG+A18diuhWyGq6A2bSp10NhklKb+ecGN2n1yXv7jXA4W44OmMHBAaO8XyyBvR/8kJb/9CUgsCf01Gr8OwtWmOxfzqQ4mypYykkCULzZ0=
+  app:
+    master: portfolio1001
