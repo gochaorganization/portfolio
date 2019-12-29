@@ -21,3 +21,8 @@ before_install:
   - export TZ=Europe/Stockholm
 # https://docs.travis-ci.com/user/build-matrix/
 
+deploy:
+  provider: heroku
+  api_key:
+    secure: VOG119eZROB5PHcC9++3Vuq/UI1gPHmZHJOSIu0/yhs71uJbuIyt4PeQyPCj5hMe6EXKh+2ANOe7C/yrAfEo7n98N/KjkGb1GuPSUFuov3UaMg1/5pgvtyC/R1su34GnsvwNvXfX0T37tWxJT1xS7AzOM2txBfzTI+Hj1YH6Wxs1UBhOQ+8O58tKxpXTiZKrbWVwECiiDBb4G76iVmCcRxHic3lis0WsaRwUReQy2XjWp2VDi6eOi21eM9sCE79LvH9woooocvAx7KwIkk/IENqLcicbDns0yYkoDlYzqOaGm0qBu4itaYYtBmruq1VlM3CQCaD7WWs0/wgUYfBiKbt2+LrV6JRP1ViSw9rsl5HOR7UCLQwvkLJum7XP7+GPIUNQ+i7BE2+JEkIouqIvza47cCHA3HeYxb6YL66wCxhBDthEU0/J86APSzA1kgDATkTRWiCCrCSe5iT6JJpvX0TePZRAT3IzusqGwb/5qMkXlJyFO8jBCZlXgzBpVzSFBjI/TA3M5VRV2CFgVGaWba+0yHbpYJ9FiYjeqy87lJ5rwfvwfGUd2MNZuZVB9QoetMWc2yfO16fsTCoP/E0ZuN6VZoIoYvv7aoACeB7dCWvP8MceNFREy0+sHG+wm3KGj9nXGIZLTMLyrSsqrxK9QexqLvkNbyjcGoDv3Pfmdbg=
+  app: portfolio1001
