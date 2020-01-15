@@ -1,20 +1,20 @@
-language: node_js
-node_js: 10.15
-cache:
-  yarn: true
-addons:
-  apt:
-    packages:
-      - libgconf-2-4
-install:
-  - yarn install --frozen-lockfile
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
-  - export PATH="$HOME/.yarn/bin:$PATH"
-deploy:
-  provider: heroku
-  api_key:
-    secure: R/Juxw1JWO/nd25PsSApeO06pQPpuKjoZE4pkVkamgu3ewiZM0mGYN2GUlDHoEQ2gJGg9XxwUD+nMOmkJz08qrp2JXBBGiZifQ7+nApo4p2EAAPgCFZzByXs9mkLwrtrP+IQTCZ7+r34lQWbQcL5Yrpzjm+OW5vz5Ovg+lcZHAVUY3XYPqQxX9o4nhr+PGOlKug6WVJIGKewGxNtWrC7fLRzisL1TOOSleDbHfPtMBOtTvy7dcVaIYWgNZRl+mcSW/FiEvTvpRsmk6ycDhyqUZNDxitdhVgLDCedOLoQ29JrwGPACpNkpaCJJy2JKHe/Uubbg3uVK9ExYrzAb1Dmu/ogjVEuJHQWMzytBGMeS+8EkYOjzcEnXu+oIKBNk1a6E+HMp5vDrYDkJQy6rx+Za8WNyUrXDwYBbkSTIj/kDc2n5+jYLD2oAZA6udobs078SDX0xMRIkHYEETgsvpyAFOiDbBUpUVEybxtdhuk31xifexAsFVQ+71KihV1y+JNwjQt5hd6SDqTNvanhQ+19oqKQc6t88c43aIgsuSlPkR+zoxUKTq+W7QGegYHYxjfs4Tt6qVTzjeBUxPxCBOamSO0CLdR6l4eC2GpdQYcA+IwQT4Xp7O1+EYt18ykIVg9Y/fHX63TDWYNFvhQKJQmg5HnRRUT6+nyVK94iHB20zHc=
-  app:
-    master: portfolio1001
-    production: portfolio1002
+# language: node_js
+# node_js: 10.15
+# cache:
+#   yarn: true
+# addons:
+#   apt:
+#     packages:
+#       - libgconf-2-4
+# install:
+#   - yarn install --frozen-lockfile
+# before_install:
+#   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
+#   - export PATH="$HOME/.yarn/bin:$PATH"
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: R/Juxw1JWO/nd25PsSApeO06pQPpuKjoZE4pkVkamgu3ewiZM0mGYN2GUlDHoEQ2gJGg9XxwUD+nMOmkJz08qrp2JXBBGiZifQ7+nApo4p2EAAPgCFZzByXs9mkLwrtrP+IQTCZ7+r34lQWbQcL5Yrpzjm+OW5vz5Ovg+lcZHAVUY3XYPqQxX9o4nhr+PGOlKug6WVJIGKewGxNtWrC7fLRzisL1TOOSleDbHfPtMBOtTvy7dcVaIYWgNZRl+mcSW/FiEvTvpRsmk6ycDhyqUZNDxitdhVgLDCedOLoQ29JrwGPACpNkpaCJJy2JKHe/Uubbg3uVK9ExYrzAb1Dmu/ogjVEuJHQWMzytBGMeS+8EkYOjzcEnXu+oIKBNk1a6E+HMp5vDrYDkJQy6rx+Za8WNyUrXDwYBbkSTIj/kDc2n5+jYLD2oAZA6udobs078SDX0xMRIkHYEETgsvpyAFOiDbBUpUVEybxtdhuk31xifexAsFVQ+71KihV1y+JNwjQt5hd6SDqTNvanhQ+19oqKQc6t88c43aIgsuSlPkR+zoxUKTq+W7QGegYHYxjfs4Tt6qVTzjeBUxPxCBOamSO0CLdR6l4eC2GpdQYcA+IwQT4Xp7O1+EYt18ykIVg9Y/fHX63TDWYNFvhQKJQmg5HnRRUT6+nyVK94iHB20zHc=
+#   app:
+#     master: portfolio1001
+#     production: portfolio1002
